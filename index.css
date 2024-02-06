@@ -1,0 +1,176 @@
+header{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Kaisei Decol', serif;
+    text-align: center;
+    margin-top: 0;
+}
+.title{
+    font-size: 70px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.sub{
+    font-size: 40px;
+    margin-top: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #fff;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  /* ここから下がハンバーガーメニューに関するCSS */
+    
+  /* チェックボックスを非表示にする */
+  .drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    position: absolute;
+    bottom: 470px;
+    right: 30px;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+    font-size: 50px;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
+  .carousel-inner img{
+    margin: 0 auto;
+    width: 900px;
+    height: 570px;
+  }
+
+  .container{
+    width:320px;
+    height: 320px;
+    position: relative;
+    text-align: center;
+  }
+  .container img{
+    width:320px;
+    height: 320px;
+  }
+  p{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size:35px;
+    color: rgb(255, 255, 255);
+    padding:0;
+    margin:0;
+    font-family: 'Kaisei Decol', serif;
+  }
+.top{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.bottom{
+  display: flex;
+  justify-content: center;
+}
+#right{
+  margin-right: 0;
+  padding-right: 0;
+}
+#left{
+  margin-left: 0;
+  padding-left: 0;
+}
+.back{
+  background-image: url(img/rm209-ning-06-a\ \(2\).jpg);
+  padding: 0;
+}
+.black{
+  color: rgb(255, 255, 255);
+}
+footer{
+  margin-top: 80px;
+  background-color: gray;
+  text-align: center;
+  font-size: 31px;
+  font-family: 'Kaisei Decol', serif;
+}
+.iwate{
+  color: rgb(195, 244, 120);
+}
+#left{
+  margin: 0 0;
+}
+.container img:hover{
+  opacity: 0.5;
+}
